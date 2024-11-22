@@ -20,6 +20,13 @@ vim.keymap.set('v', 'l', '<up>')
 vim.keymap.set('v', 'ñ', '<right>')
 vim.keymap.set('v', 'h', '<Nop>')
 
+vim.keymap.set('o', 'j', '<left>')
+vim.keymap.set('o', 'k', '<down>')
+vim.keymap.set('o', 'l', '<up>')
+vim.keymap.set('o', 'ñ', '<right>')
+vim.keymap.set('o', 'h', '<Nop>')
+
+
 -- Navigate vim panes better
 vim.keymap.set('n', '<c-j>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-k>', ':wincmd j<CR>')

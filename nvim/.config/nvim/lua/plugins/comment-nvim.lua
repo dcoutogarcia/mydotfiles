@@ -1,6 +1,6 @@
 return {
     'numToStr/Comment.nvim',
-    opts = {
-        -- add any options here
-    }
+    config = function()
+     -- vim.keymap.set("n", "<leader>/", require("Comment.api").toggle.linewise.current())
+    end
 }

@@ -1,6 +1,6 @@
-return { 
+return {
   {
-    "williamboman/mason.nvim", 
+    "williamboman/mason.nvim",
     lazy = false,
     config = function()
       require("mason").setup()
@@ -15,24 +15,30 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    configure = function()
+    lazy = false,
+    config = function()
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
       lspconfig.pyright.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+        filetypes = {"python"},
+        venvpath = ("/home/stoneboy/Python venvs/MachineLearning/"),
+      })
+      lspconfig.fortls.setup({
         capabilities = capabilities
       })
-      lspconfig.forls.setup({
+      lspconfig.ltex.setup({
         capabilities = capabilities
       })
-      
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+
+      vim.keymap.set("n", "<leader>sd", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
-      vim.keymap.set("n", "<leader>rn", vim.lsp.buf.code_action, {})
-      vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, {})
+      vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
 
     end,
   },

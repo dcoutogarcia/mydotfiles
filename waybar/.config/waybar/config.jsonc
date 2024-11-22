@@ -72,7 +72,7 @@
     "return-type": "json",    
     "on-click": "playerctl -p spotify play-pause",
     "on-click-middle": "playerctl -p spotify next",
-    "exec": "/home/stoneboy/.cargo/bin//spotifatius monitor",
+    "exec": "echo | /home/stoneboy/.cargo/bin/spotifatius monitor & /home/stoneboy/.cargo/bin/spotifatius monitor",
     "max-length": 80
   }
   
