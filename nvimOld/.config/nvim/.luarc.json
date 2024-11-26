@@ -1,0 +1,9 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "capabilities",
+        "builtin",
+        "on_attach",
+        "ltex"
+    ]
+}
