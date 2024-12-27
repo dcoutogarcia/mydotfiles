@@ -49,6 +49,9 @@ play = [
 	{ run = 'mpv "%1"', orphan = true, for = "windows" },
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
+pdff = [
+	{ run = 'okular "$@"', desc = "okular", orphan = true, for = "unix" },
+]
 
 [open]
 rules = [
@@ -71,6 +74,9 @@ rules = [
 	{ mime = "application/x-7z-compressed", use = [ "extract", "reveal" ] },
 	{ mime = "application/x-rar",           use = [ "extract", "reveal" ] },
 	{ mime = "application/xz",              use = [ "extract", "reveal" ] },
+
+
+  { mime = "application/pdf",             use = [ "pdff", "reveal" ] },
 
 	{ mime = "*", use = [ "open", "reveal" ] },
 ]
