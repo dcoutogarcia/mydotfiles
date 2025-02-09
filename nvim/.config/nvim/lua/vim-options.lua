@@ -9,8 +9,8 @@ vim.opt.swapfile = false
 
 -- Change nvim movement to spanish keyboard
 vim.keymap.set('n', 'j', '<left>')
-vim.keymap.set('n', 'k', '<down>')
-vim.keymap.set('n', 'l', '<up>')
+vim.keymap.set('n', 'k', 'g<down>')
+vim.keymap.set('n', 'l', 'g<up>')
 vim.keymap.set('n', 'ñ', '<right>')
 vim.keymap.set('n', 'h', '<Nop>')
 
