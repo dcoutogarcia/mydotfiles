@@ -72,8 +72,8 @@
     "return-type": "json",    
     "on-click": "playerctl -p spotify play-pause",
     "on-click-middle": "playerctl -p spotify next",
-    "exec": "/home/stoneboy/.cargo/bin/spotifatius monitor",
-    "max-length": 80
+    "exec": "$HOME/.config/waybar/spotify-waybar.sh",
+    "max-length": 80,
   }
   
 }
