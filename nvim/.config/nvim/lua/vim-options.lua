@@ -15,8 +15,8 @@ vim.keymap.set('n', 'ñ', '<right>')
 vim.keymap.set('n', 'h', '<Nop>')
 
 vim.keymap.set('v', 'j', '<left>')
-vim.keymap.set('v', 'k', '<down>')
-vim.keymap.set('v', 'l', '<up>')
+vim.keymap.set('v', 'k', 'g<down>')
+vim.keymap.set('v', 'l', 'g<up>')
 vim.keymap.set('v', 'ñ', '<right>')
 vim.keymap.set('v', 'h', '<Nop>')
 
@@ -36,7 +36,7 @@ vim.keymap.set('n', '<c-ñ>', ':wincmd l<CR>')
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
 -- Números de línea absolutos y relativos
---vim.opt.relativenumber = true
-vim.opt.number = true
+vim.opt.relativenumber = true
+--vim.opt.number = true
 -- vim.opt.signcolumn = "number" 
 
